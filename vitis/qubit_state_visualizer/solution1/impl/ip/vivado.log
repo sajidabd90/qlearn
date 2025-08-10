@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 10 02:16:25 2025
+# Process ID: 429378
+# Current directory: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip/vivado.log
+# Journal file: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip/vivado.jou
+# Running On: soulbird-Yoga-C940, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 4, Host memory: 16545 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1293.613 ; gain = 0.023 ; free physical = 2235 ; free virtual = 20318
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 10 02:16:45 2025...

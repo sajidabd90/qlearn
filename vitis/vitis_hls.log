@@ -1,0 +1,44 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'soulbird' on host 'soulbird-Yoga-C940' (Linux_x86_64 version 5.15.0-139-generic) on Sun Aug 10 02:16:09 +06 2025
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/soulbird/hls_prac/qc/vitis'
+Sourcing Tcl script '/home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project qubit_state_visualizer 
+INFO: [HLS 200-10] Opening project '/home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer'.
+INFO: [HLS 200-1510] Running: set_top qubit_processor_fixed 
+INFO: [HLS 200-1510] Running: add_files qubit_state_visualizer/core.cpp 
+INFO: [HLS 200-10] Adding design file 'qubit_state_visualizer/core.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 3 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3ns.
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/soulbird/hls_prac/qc/ips 
+Running Dispatch Server on port: 35787
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1293.613 ; gain = 0.023 ; free physical = 2235 ; free virtual = 20318
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 10 02:16:45 2025...
+INFO: [HLS 200-802] Generated output file /home/soulbird/hls_prac/qc/ips/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 27.57 seconds. CPU system time: 1.3 seconds. Elapsed time: 28.87 seconds; current allocated memory: 6.816 MB.
+INFO: [HLS 200-112] Total CPU user time: 28.62 seconds. Total CPU system time: 1.45 seconds. Total elapsed time: 39.94 seconds; peak allocated memory: 204.574 MB.

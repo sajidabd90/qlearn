@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 10 02:16:25 2025
+# Process ID: 429378
+# Current directory: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip/vivado.log
+# Journal file: /home/soulbird/hls_prac/qc/vitis/qubit_state_visualizer/solution1/impl/ip/vivado.jou
+# Running On: soulbird-Yoga-C940, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 4, Host memory: 16545 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

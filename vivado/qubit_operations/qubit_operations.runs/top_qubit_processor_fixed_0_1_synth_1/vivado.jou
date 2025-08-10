@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 10 02:18:55 2025
+# Process ID: 430120
+# Current directory: /home/soulbird/hls_prac/qc/vivado/qubit_operations/qubit_operations.runs/top_qubit_processor_fixed_0_1_synth_1
+# Command line: vivado -log top_qubit_processor_fixed_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_qubit_processor_fixed_0_1.tcl
+# Log file: /home/soulbird/hls_prac/qc/vivado/qubit_operations/qubit_operations.runs/top_qubit_processor_fixed_0_1_synth_1/top_qubit_processor_fixed_0_1.vds
+# Journal file: /home/soulbird/hls_prac/qc/vivado/qubit_operations/qubit_operations.runs/top_qubit_processor_fixed_0_1_synth_1/vivado.jou
+# Running On: soulbird-Yoga-C940, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 4, Host memory: 16545 MB
+#-----------------------------------------------------------
+source top_qubit_processor_fixed_0_1.tcl -notrace

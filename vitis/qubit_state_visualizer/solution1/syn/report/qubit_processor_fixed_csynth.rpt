@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'qubit_processor_fixed'
+================================================================
+* Date:           Sun Aug 10 02:13:37 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        qubit_state_visualizer
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.00 ns|  2.077 ns|     0.81 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  18.000 ns|  18.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    280|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    4|     512|    304|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|     708|    224|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    4|    1220|    808|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|       1|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+---------------------+---------+----+-----+-----+-----+
+    |        Instance        |        Module       | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------+---------------------+---------+----+-----+-----+-----+
+    |control_s_axi_U         |control_s_axi        |        0|   0|  220|  300|    0|
+    |mul_17s_14ns_29_4_1_U1  |mul_17s_14ns_29_4_1  |        0|   1|   73|    1|    0|
+    |mul_17s_14ns_29_4_1_U2  |mul_17s_14ns_29_4_1  |        0|   1|   73|    1|    0|
+    |mul_17s_14ns_29_4_1_U3  |mul_17s_14ns_29_4_1  |        0|   1|   73|    1|    0|
+    |mul_17s_14ns_29_4_1_U4  |mul_17s_14ns_29_4_1  |        0|   1|   73|    1|    0|
+    +------------------------+---------------------+---------+----+-----+-----+-----+
+    |Total                   |                     |        0|   4|  512|  304|    0|
+    +------------------------+---------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |ret_V_1_fu_263_p2        |         +|   0|  0|  24|          17|          17|
+    |ret_V_fu_251_p2          |         +|   0|  0|  24|          17|          17|
+    |ret_V_2_fu_269_p2        |         -|   0|  0|  24|          17|          17|
+    |ret_V_3_fu_275_p2        |         -|   0|  0|  24|          17|          17|
+    |icmp_ln49_1_fu_286_p2    |      icmp|   0|  0|   8|           2|           1|
+    |icmp_ln49_2_fu_291_p2    |      icmp|   0|  0|   8|           2|           1|
+    |icmp_ln49_fu_281_p2      |      icmp|   0|  0|   8|           2|           3|
+    |or_ln49_fu_296_p2        |        or|   0|  0|   2|           1|           1|
+    |out_alpha_imag           |    select|   0|  0|  16|           1|           1|
+    |out_alpha_real           |    select|   0|  0|  16|           1|          16|
+    |out_beta_imag            |    select|   0|  0|  16|           1|           1|
+    |out_beta_real            |    select|   0|  0|  16|           1|          16|
+    |select_ln49_2_fu_368_p3  |    select|   0|  0|  14|           1|          14|
+    |select_ln49_3_fu_375_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln49_5_fu_389_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln49_7_fu_403_p3  |    select|   0|  0|  14|           1|           1|
+    |select_ln49_8_fu_410_p3  |    select|   0|  0|  16|           1|          16|
+    |select_ln49_fu_354_p3    |    select|   0|  0|  16|           1|          16|
+    |ap_enable_pp0            |       xor|   0|  0|   2|           1|           2|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0| 280|          86|         189|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6     |   1|   0|    1|          0|
+    |icmp_ln49_2_reg_483         |   1|   0|    1|          0|
+    |icmp_ln49_reg_475           |   1|   0|    1|          0|
+    |in_alpha_imag_read_reg_436  |  16|   0|   16|          0|
+    |in_alpha_real_read_reg_442  |  16|   0|   16|          0|
+    |in_beta_imag_read_reg_424   |  16|   0|   16|          0|
+    |in_beta_real_read_reg_430   |  16|   0|   16|          0|
+    |mul_ln1270_1_reg_522        |  29|   0|   29|          0|
+    |mul_ln1270_2_reg_527        |  29|   0|   29|          0|
+    |mul_ln1270_3_reg_532        |  29|   0|   29|          0|
+    |mul_ln1270_reg_517          |  29|   0|   29|          0|
+    |operation_read_reg_448      |   2|   0|    2|          0|
+    |or_ln49_reg_489             |   1|   0|    1|          0|
+    |ret_V_1_reg_460             |  17|   0|   17|          0|
+    |ret_V_2_reg_465             |  17|   0|   17|          0|
+    |ret_V_3_reg_470             |  17|   0|   17|          0|
+    |ret_V_reg_455               |  17|   0|   17|          0|
+    |icmp_ln49_2_reg_483         |  64|  32|    1|          0|
+    |icmp_ln49_reg_475           |  64|  32|    1|          0|
+    |in_alpha_imag_read_reg_436  |  64|  32|   16|          0|
+    |in_alpha_real_read_reg_442  |  64|  32|   16|          0|
+    |in_beta_imag_read_reg_424   |  64|  32|   16|          0|
+    |in_beta_real_read_reg_430   |  64|  32|   16|          0|
+    |or_ln49_reg_489             |  64|  32|    1|          0|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       | 708| 224|  327|          0|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|                control|       pointer|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|                control|       pointer|
+|s_axi_control_AWADDR   |   in|    7|       s_axi|                control|       pointer|
+|s_axi_control_WVALID   |   in|    1|       s_axi|                control|       pointer|
+|s_axi_control_WREADY   |  out|    1|       s_axi|                control|       pointer|
+|s_axi_control_WDATA    |   in|   32|       s_axi|                control|       pointer|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|                control|       pointer|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|                control|       pointer|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|                control|       pointer|
+|s_axi_control_ARADDR   |   in|    7|       s_axi|                control|       pointer|
+|s_axi_control_RVALID   |  out|    1|       s_axi|                control|       pointer|
+|s_axi_control_RREADY   |   in|    1|       s_axi|                control|       pointer|
+|s_axi_control_RDATA    |  out|   32|       s_axi|                control|       pointer|
+|s_axi_control_RRESP    |  out|    2|       s_axi|                control|       pointer|
+|s_axi_control_BVALID   |  out|    1|       s_axi|                control|       pointer|
+|s_axi_control_BREADY   |   in|    1|       s_axi|                control|       pointer|
+|s_axi_control_BRESP    |  out|    2|       s_axi|                control|       pointer|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  qubit_processor_fixed|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  qubit_processor_fixed|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  qubit_processor_fixed|  return value|
++-----------------------+-----+-----+------------+-----------------------+--------------+
+

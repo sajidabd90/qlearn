@@ -1,0 +1,660 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>qubit_processor_fixed</TopModelName>
+        <TargetClockPeriod>3.00</TargetClockPeriod>
+        <ClockUncertainty>0.81</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>2.077</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>6</Best-caseLatency>
+            <Average-caseLatency>6</Average-caseLatency>
+            <Worst-caseLatency>6</Worst-caseLatency>
+            <Best-caseRealTimeLatency>18.000 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>18.000 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>18.000 ns</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>1</PipelineInitiationInterval>
+            <PipelineDepth>7</PipelineDepth>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>4</DSP>
+            <FF>1220</FF>
+            <LUT>808</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>7</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>7</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>qubit_processor_fixed</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>qubit_processor_fixed</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>qubit_processor_fixed</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>qubit_processor_fixed</ModuleName>
+            <BindInstances>ret_V_fu_251_p2 mul_17s_14ns_29_4_1_U2 ret_V_1_fu_263_p2 mul_17s_14ns_29_4_1_U4 ret_V_2_fu_269_p2 mul_17s_14ns_29_4_1_U1 ret_V_3_fu_275_p2 mul_17s_14ns_29_4_1_U3</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>qubit_processor_fixed</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.00</TargetClockPeriod>
+                    <ClockUncertainty>0.81</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>2.077</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>18.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>18.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>18.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>7</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>1220</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>808</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ret_V_fu_251_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_17s_14ns_29_4_1_U2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1270" URAM="0" VARIABLE="mul_ln1270"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ret_V_1_fu_263_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_17s_14ns_29_4_1_U4" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1270" URAM="0" VARIABLE="mul_ln1270_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ret_V_2_fu_269_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1348" URAM="0" VARIABLE="ret_V_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_17s_14ns_29_4_1_U1" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1270" URAM="0" VARIABLE="mul_ln1270_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ret_V_3_fu_275_p2" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1348" URAM="0" VARIABLE="ret_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_17s_14ns_29_4_1_U3" SOURCE="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1270" URAM="0" VARIABLE="mul_ln1270_3"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export display_name="qubit_visualizer" output="/home/soulbird/hls_prac/qc/ips" vivado_clock="4"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="operation" index="0" direction="in" srcType="ap_uint&lt;2&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="operation" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_alpha_real" index="1" direction="in" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_alpha_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_alpha_imag" index="2" direction="in" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_alpha_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_beta_real" index="3" direction="in" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_beta_real" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_beta_imag" index="4" direction="in" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_beta_imag" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_alpha_real" index="5" direction="out" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="out_alpha_real" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="out_alpha_real_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_alpha_imag" index="6" direction="out" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="out_alpha_imag" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="out_alpha_imag_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_beta_real" index="7" direction="out" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="out_beta_real" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="out_beta_real_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_beta_imag" index="8" direction="out" srcType="ap_fixed&lt;16, 3, AP_TRN, AP_WRAP, 0&gt;*" srcSize="16">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="out_beta_imag" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="out_beta_imag_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="7" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="operation" access="W" description="Data signal of operation" range="32">
+                    <fields>
+                        <field offset="0" width="2" name="operation" access="W" description="Bit 1 to 0 of operation"/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="in_alpha_real" access="W" description="Data signal of in_alpha_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="in_alpha_real" access="W" description="Bit 15 to 0 of in_alpha_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="in_alpha_imag" access="W" description="Data signal of in_alpha_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="in_alpha_imag" access="W" description="Bit 15 to 0 of in_alpha_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x28" name="in_beta_real" access="W" description="Data signal of in_beta_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="in_beta_real" access="W" description="Bit 15 to 0 of in_beta_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x30" name="in_beta_imag" access="W" description="Data signal of in_beta_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="in_beta_imag" access="W" description="Bit 15 to 0 of in_beta_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="out_alpha_real" access="R" description="Data signal of out_alpha_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="out_alpha_real" access="R" description="Bit 15 to 0 of out_alpha_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x3c" name="out_alpha_real_ctrl" access="R" description="Control signal of out_alpha_real" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="out_alpha_real_ap_vld" access="R" description="Control signal out_alpha_real_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x48" name="out_alpha_imag" access="R" description="Data signal of out_alpha_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="out_alpha_imag" access="R" description="Bit 15 to 0 of out_alpha_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x4c" name="out_alpha_imag_ctrl" access="R" description="Control signal of out_alpha_imag" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="out_alpha_imag_ap_vld" access="R" description="Control signal out_alpha_imag_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x58" name="out_beta_real" access="R" description="Data signal of out_beta_real" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="out_beta_real" access="R" description="Bit 15 to 0 of out_beta_real"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x5c" name="out_beta_real_ctrl" access="R" description="Control signal of out_beta_real" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="out_beta_real_ap_vld" access="R" description="Control signal out_beta_real_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x68" name="out_beta_imag" access="R" description="Data signal of out_beta_imag" range="32">
+                    <fields>
+                        <field offset="0" width="16" name="out_beta_imag" access="R" description="Bit 15 to 0 of out_beta_imag"/>
+                        <field offset="16" width="16" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x6c" name="out_beta_imag_ctrl" access="R" description="Control signal of out_beta_imag" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="out_beta_imag_ap_vld" access="R" description="Control signal out_beta_imag_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="operation"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="in_alpha_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="in_alpha_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="in_beta_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="in_beta_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="out_alpha_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="out_alpha_imag"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88" argName="out_beta_real"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104" argName="out_beta_imag"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 7, 16, 0, , , , , </column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table isCollapsed="0">
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_control">operation, 0x10, 32, W, Data signal of operation, </column>
+                    <column name="s_axi_control">in_alpha_real, 0x18, 32, W, Data signal of in_alpha_real, </column>
+                    <column name="s_axi_control">in_alpha_imag, 0x20, 32, W, Data signal of in_alpha_imag, </column>
+                    <column name="s_axi_control">in_beta_real, 0x28, 32, W, Data signal of in_beta_real, </column>
+                    <column name="s_axi_control">in_beta_imag, 0x30, 32, W, Data signal of in_beta_imag, </column>
+                    <column name="s_axi_control">out_alpha_real, 0x38, 32, R, Data signal of out_alpha_real, </column>
+                    <column name="s_axi_control">out_alpha_real_ctrl, 0x3c, 32, R, Control signal of out_alpha_real, 0=out_alpha_real_ap_vld</column>
+                    <column name="s_axi_control">out_alpha_imag, 0x48, 32, R, Data signal of out_alpha_imag, </column>
+                    <column name="s_axi_control">out_alpha_imag_ctrl, 0x4c, 32, R, Control signal of out_alpha_imag, 0=out_alpha_imag_ap_vld</column>
+                    <column name="s_axi_control">out_beta_real, 0x58, 32, R, Data signal of out_beta_real, </column>
+                    <column name="s_axi_control">out_beta_real_ctrl, 0x5c, 32, R, Control signal of out_beta_real, 0=out_beta_real_ap_vld</column>
+                    <column name="s_axi_control">out_beta_imag, 0x68, 32, R, Data signal of out_beta_imag, </column>
+                    <column name="s_axi_control">out_beta_imag_ctrl, 0x6c, 32, R, Control signal of out_beta_imag, 0=out_beta_imag_ap_vld</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="interrupt">interrupt, interrupt, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="operation">in, ap_uint&lt;2&gt;</column>
+                    <column name="in_alpha_real">in, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;</column>
+                    <column name="in_alpha_imag">in, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;</column>
+                    <column name="in_beta_real">in, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;</column>
+                    <column name="in_beta_imag">in, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;</column>
+                    <column name="out_alpha_real">out, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="out_alpha_imag">out, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="out_beta_real">out, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="out_beta_imag">out, ap_fixed&lt;16 3 AP_TRN AP_WRAP 0&gt;*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="operation">s_axi_control, register, name=operation offset=0x10 range=32, </column>
+                    <column name="in_alpha_real">s_axi_control, register, name=in_alpha_real offset=0x18 range=32, </column>
+                    <column name="in_alpha_imag">s_axi_control, register, name=in_alpha_imag offset=0x20 range=32, </column>
+                    <column name="in_beta_real">s_axi_control, register, name=in_beta_real offset=0x28 range=32, </column>
+                    <column name="in_beta_imag">s_axi_control, register, name=in_beta_imag offset=0x30 range=32, </column>
+                    <column name="out_alpha_real">s_axi_control, register, name=out_alpha_real offset=0x38 range=32, </column>
+                    <column name="out_alpha_real">s_axi_control, register, name=out_alpha_real_ctrl offset=0x3c range=32, </column>
+                    <column name="out_alpha_imag">s_axi_control, register, name=out_alpha_imag offset=0x48 range=32, </column>
+                    <column name="out_alpha_imag">s_axi_control, register, name=out_alpha_imag_ctrl offset=0x4c range=32, </column>
+                    <column name="out_beta_real">s_axi_control, register, name=out_beta_real offset=0x58 range=32, </column>
+                    <column name="out_beta_real">s_axi_control, register, name=out_beta_real_ctrl offset=0x5c range=32, </column>
+                    <column name="out_beta_imag">s_axi_control, register, name=out_beta_imag offset=0x68 range=32, </column>
+                    <column name="out_beta_imag">s_axi_control, register, name=out_beta_imag_ctrl offset=0x6c range=32, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="pipeline" location="qubit_state_visualizer/core.cpp:31" status="valid" parentFunction="qubit_processor_fixed" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:34" status="valid" parentFunction="qubit_processor_fixed" variable="operation" isDirective="0" options="s_axilite port=operation"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:35" status="valid" parentFunction="qubit_processor_fixed" variable="in_alpha_real" isDirective="0" options="s_axilite port=in_alpha_real"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:36" status="valid" parentFunction="qubit_processor_fixed" variable="in_alpha_imag" isDirective="0" options="s_axilite port=in_alpha_imag"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:37" status="valid" parentFunction="qubit_processor_fixed" variable="in_beta_real" isDirective="0" options="s_axilite port=in_beta_real"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:38" status="valid" parentFunction="qubit_processor_fixed" variable="in_beta_imag" isDirective="0" options="s_axilite port=in_beta_imag"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:39" status="valid" parentFunction="qubit_processor_fixed" variable="out_alpha_real" isDirective="0" options="s_axilite port=out_alpha_real"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:40" status="valid" parentFunction="qubit_processor_fixed" variable="out_alpha_imag" isDirective="0" options="s_axilite port=out_alpha_imag"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:41" status="valid" parentFunction="qubit_processor_fixed" variable="out_beta_real" isDirective="0" options="s_axilite port=out_beta_real"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:42" status="valid" parentFunction="qubit_processor_fixed" variable="out_beta_imag" isDirective="0" options="s_axilite port=out_beta_imag"/>
+        <Pragma type="interface" location="qubit_state_visualizer/core.cpp:43" status="valid" parentFunction="qubit_processor_fixed" variable="return" isDirective="0" options="s_axilite port=return"/>
+        <Pragma type="allocation" location="qubit_state_visualizer/core.cpp:44" status="valid" parentFunction="qubit_processor_fixed" variable="" isDirective="0" options="operation instances=mul limit=4"/>
+    </PragmaReport>
+</profile>
+

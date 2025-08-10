@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1754770418426">
+  <ports id="1" name="operation" type="PortType" originalName="operation.V" coreId="0" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in_alpha_real" type="PortType" originalName="in_alpha_real.V" coreId="0" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="in_alpha_imag" type="PortType" originalName="in_alpha_imag.V" coreId="30" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="in_beta_real" type="PortType" originalName="in_beta_real.V" coreId="78" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="in_beta_imag" type="PortType" originalName="in_beta_imag.V" coreId="144" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="out_alpha_real" type="PortType" originalName="out_alpha_real.V" coreId="2300209552" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="out_alpha_imag" type="PortType" originalName="out_alpha_imag.V" coreId="2300209552" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="out_beta_real" type="PortType" originalName="out_beta_real.V" coreId="2300296384" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="out_beta_imag" type="PortType" originalName="out_beta_imag.V" coreId="2300209552" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="88" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="90" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="92" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="94" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="97" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="121" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="133" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="155" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges id="167" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.33"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="171" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="172" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.34"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.0/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.35"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.36"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.37"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.0/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.0/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.38"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.0/@node_objs.39" sink_obj="//@ports.5"/>
+  <edges id="188" source_obj="//@regions.0/@basic_blocks.0/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.39"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.0/@node_objs.40" sink_obj="//@ports.6"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.0/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.40"/>
+  <edges id="193" source_obj="//@regions.0/@basic_blocks.0/@node_objs.41" sink_obj="//@ports.7"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.0/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.41"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.0/@node_objs.42" sink_obj="//@ports.8"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.42"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="253" pipe_depth="7" RegionName="qubit_processor_fixed">
+    <basic_blocks id="85" name="qubit_processor_fixed" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="in_beta_imag_read" lineNumber="17" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="17" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>in_beta_imag</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="in_beta_real_read" lineNumber="17" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="17" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>in_beta_real</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="in_alpha_imag_read" lineNumber="17" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="17" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>in_alpha_imag</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="in_alpha_real_read" lineNumber="17" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="17" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>in_alpha_real</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="operation_read" lineNumber="17" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" bitwidth="2" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="17" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>operation</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sext_ln1347" lineNumber="1347" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1347_fu_245_p1" coreId="0" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sext_ln1347_1" lineNumber="1347" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1347_1_fu_248_p1" coreId="1679850272" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="ret_V" lineNumber="1347" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_fu_251_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln1270" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreId="2300277952" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="mul_ln1270" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_17s_14ns_29_4_1_U2" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="mul" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="1.87" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="trunc_ln" lineNumber="818" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln_fu_318_p4" coreId="0" contextFuncName="operator_assign_33_7_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="818" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator=&amp;lt;33, 7, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="sext_ln1347_2" lineNumber="1347" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1347_2_fu_257_p1" coreId="2300294688" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="sext_ln1347_3" lineNumber="1347" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1347_3_fu_260_p1" coreId="574452736" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="ret_V_1" lineNumber="1347" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_1_fu_263_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1347" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator+&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="sext_ln1270_1" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreId="2300194784" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="mul_ln1270_1" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_17s_14ns_29_4_1_U4" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="mul" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="1.87" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="trunc_ln818_1" lineNumber="818" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln818_1_fu_327_p4" coreId="0" contextFuncName="operator_assign_33_7_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="818" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator=&amp;lt;33, 7, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="ret_V_2" lineNumber="1348" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_2_fu_269_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_sub_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1348" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator-&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="sext_ln1270_2" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreId="2300258736" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="mul_ln1270_2" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_17s_14ns_29_4_1_U1" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="mul" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="1.87" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln818_2" lineNumber="818" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln818_2_fu_336_p4" coreId="0" contextFuncName="operator_assign_33_7_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="818" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator=&amp;lt;33, 7, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="ret_V_3" lineNumber="1348" originalName="ret.V" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="ret_V_3_fu_275_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_sub_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="17" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1348" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator-&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="sext_ln1270_3" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." coreId="608" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="mul_ln1270_3" lineNumber="1270" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="mul_17s_14ns_29_4_1_U3" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="operator_mul_16_3_true_AP_TRN_AP_WRAP_0" bitwidth="29" opcode="mul" nodeLabel="2.0" nodeLatency="3" m_display="0" m_delay="1.87" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="1270" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator*&amp;lt;16, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="trunc_ln818_3" lineNumber="818" fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" fileDirectory=".." rtlName="trunc_ln818_3_fu_345_p4" coreId="1936942413" contextFuncName="operator_assign_33_7_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="6.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h" linenumber="818" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="operator=&amp;lt;33, 7, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="icmp_ln49" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="icmp_ln49_fu_281_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="qubit_processor_fixed" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.95" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="select_ln49" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_fu_354_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="icmp_ln49_1" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="icmp_ln49_1_fu_286_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="qubit_processor_fixed" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.95" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="icmp_ln49_2" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="icmp_ln49_2_fu_291_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="qubit_processor_fixed" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.95" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="or_ln49" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="or_ln49_fu_296_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="qubit_processor_fixed" bitwidth="1" opcode="or" nodeLabel="1.0" m_display="0" m_delay="0.97" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="temp_out_beta_i" lineNumber="49" originalName="temp_out_beta_i" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="out_beta_imag" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_delay="0.8" m_topoIndex="31" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="select_ln49_2" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_2_fu_368_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="select_ln49_3" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_3_fu_375_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="temp_out_beta_r" lineNumber="49" originalName="temp_out_beta_r" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="out_beta_real" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_delay="0.8" m_topoIndex="34" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="select_ln49_5" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_5_fu_389_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="temp_out_alpha_i" lineNumber="49" originalName="temp_out_alpha_i" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="out_alpha_imag" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_delay="0.8" m_topoIndex="36" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="select_ln49_7" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_7_fu_403_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="select_ln49_8" lineNumber="49" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="select_ln49_8_fu_410_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="temp_out_alpha_r" lineNumber="49" originalName="temp_out_alpha_r" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." rtlName="out_alpha_real" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="qubit_processor_fixed" bitwidth="16" opcode="select" nodeLabel="6.0" m_display="0" m_delay="0.8" m_topoIndex="39" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="49" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="out_alpha_real_write_ln84" lineNumber="84" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="84" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>out_alpha_real</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="out_alpha_imag_write_ln85" lineNumber="85" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="85" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>out_alpha_imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="out_beta_real_write_ln86" lineNumber="86" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="86" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>out_beta_real</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="out_beta_imag_write_ln87" lineNumber="87" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="qubit_processor_fixed" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="87" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>out_beta_imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="_ln88" lineNumber="88" fileName="qubit_state_visualizer/core.cpp" fileDirectory=".." coreId="2300267704" contextFuncName="qubit_processor_fixed" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="qubit_state_visualizer/core.cpp" linenumber="88" fileDirectory="/home/soulbird/hls_prac/qc/vitis" functionName="qubit_processor_fixed"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="qubit_state_visualizer/core.cpp">
+        <validLinenumbers>17</validLinenumbers>
+        <validLinenumbers>49</validLinenumbers>
+        <validLinenumbers>84</validLinenumbers>
+        <validLinenumbers>85</validLinenumbers>
+        <validLinenumbers>86</validLinenumbers>
+        <validLinenumbers>87</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h">
+        <validLinenumbers>1347</validLinenumbers>
+        <validLinenumbers>1270</validLinenumbers>
+        <validLinenumbers>818</validLinenumbers>
+        <validLinenumbers>1348</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="in_alpha_imag_read_reg_436">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln49_2_reg_483">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="in_beta_imag_read_reg_424">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln49_reg_489">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln1270_reg_517">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="in_beta_real_read_reg_430">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1270_2_reg_507">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_2_reg_465">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1270_3_reg_512">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_3_reg_470">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln1270_1_reg_522">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln1270_2_reg_527">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="operation_read_reg_448">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1270_1_reg_502">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_reg_455">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln1270_3_reg_532">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="ret_V_1_reg_460">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln49_reg_475">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln1270_reg_497">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="in_alpha_real_read_reg_442">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <expressionNodes realName="sext_ln1270_1_fu_306">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_out_beta_i_fu_360">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln818_3_fu_345">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_fu_251">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_3_fu_375">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_3_fu_275">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1347_2_fu_257">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln818_2_fu_336">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1270_fu_302">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_2_fu_269">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_318">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_2_fu_368">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_5_fu_389">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln49_fu_296">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1347_fu_245">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1347_1_fu_248">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1270_3_fu_314">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_out_alpha_r_fu_416">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ret_V_1_fu_263">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_7_fu_403">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln49_2_fu_291">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1270_2_fu_310">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_out_beta_r_fu_381">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_fu_354">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln49_8_fu_410">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln818_1_fu_327">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln49_1_fu_286">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1347_3_fu_260">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln49_fu_281">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_out_alpha_i_fu_395">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_150">
+    <nodeIds>64</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_151">
+    <nodeIds>56</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_149">
+    <nodeIds>50</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_148">
+    <nodeIds>60</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="write_ln85_write_fu_127">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="operation_read_read_fu_114">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln86_write_fu_134">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_beta_real_read_read_fu_96">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln84_write_fu_120">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_alpha_imag_read_read_fu_102">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_alpha_real_read_read_fu_108">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="in_beta_imag_read_read_fu_90">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln87_write_fu_141">
+    <nodeIds>83</nodeIds>
+  </ioNodes>
+  <ioPorts name="in_alpha_imag">
+    <contents name="read">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_alpha_real">
+    <contents name="read">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_beta_imag">
+    <contents name="read">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_beta_real">
+    <contents name="read">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="operation">
+    <contents name="read">
+      <nodeIds>44</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_alpha_imag">
+    <contents name="write">
+      <nodeIds>81</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_alpha_real">
+    <contents name="write">
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_beta_imag">
+    <contents name="write">
+      <nodeIds>83</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_beta_real">
+    <contents name="write">
+      <nodeIds>82</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="4" latency="4"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="4" latency="4"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="4" latency="4"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="4" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="50" stage="3" latency="4"/>
+      <operations id="56" stage="3" latency="4"/>
+      <operations id="60" stage="3" latency="4"/>
+      <operations id="64" stage="3" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="50" stage="2" latency="4"/>
+      <operations id="56" stage="2" latency="4"/>
+      <operations id="60" stage="2" latency="4"/>
+      <operations id="64" stage="2" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="50" stage="1" latency="4"/>
+      <operations id="56" stage="1" latency="4"/>
+      <operations id="60" stage="1" latency="4"/>
+      <operations id="64" stage="1" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="qubit_processor_fixed" mII="1" mDepth="7" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="6" mMaxLatency="6">
+      <basicBlocks>85</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

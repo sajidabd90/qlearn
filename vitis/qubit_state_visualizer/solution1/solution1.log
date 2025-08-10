@@ -1,0 +1,610 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 10.03 seconds; current allocated memory: 198.383 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 21.94 seconds. CPU system time: 0.96 seconds. Elapsed time: 23.04 seconds; current allocated memory: 202.977 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<17, 3, 18>(ap_ufixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<19, 3, 0>(ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.95 seconds. CPU system time: 0.44 seconds. Elapsed time: 5.48 seconds; current allocated memory: 203.410 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 203.410 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 233.527 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1102: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.36 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.4 seconds; current allocated memory: 270.742 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:18:16) to (qubit_state_visualizer/core.cpp:39:2) in function 'qubit_operations'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:37:19) to (qubit_state_visualizer/core.cpp:61:1) in function 'qubit_operations'... converting 28 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:88:9) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:245:27) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.81 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.9 seconds; current allocated memory: 323.035 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 342.602 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qubit_operations' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 342.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 342.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln1348) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 342.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 342.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_128_V_ROM_AUTO_1R' to 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_12bkb' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' pipeline 'VITIS_LOOP_87_1' pipeline type 'loop pipeline'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.738 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+WARNING: [HLS 207-5557] Unsupported interface port data type in '#pragma HLS interface m_axi' (qubit_state_visualizer/core.cpp:27:34)
+WARNING: [HLS 207-5557] Unsupported interface port data type in '#pragma HLS interface m_axi' (qubit_state_visualizer/core.cpp:28:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 20.9 seconds. CPU system time: 0.9 seconds. Elapsed time: 21.91 seconds; current allocated memory: 201.715 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<17, 3, 18>(ap_ufixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<19, 3, 0>(ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.3 seconds. CPU system time: 0.6 seconds. Elapsed time: 5.92 seconds; current allocated memory: 202.199 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 202.199 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.18 seconds; current allocated memory: 233.320 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1102: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.37 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.42 seconds; current allocated memory: 269.957 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:18:16) to (qubit_state_visualizer/core.cpp:39:2) in function 'qubit_operations'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:37:19) to (qubit_state_visualizer/core.cpp:61:1) in function 'qubit_operations'... converting 28 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:88:9) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:245:27) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.72 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.76 seconds; current allocated memory: 321.219 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 339.445 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qubit_operations' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.16 seconds; current allocated memory: 339.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 339.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln1348) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 339.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 339.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_128_V_ROM_AUTO_1R' to 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_12bkb' due to the length limit 80
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.738 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 22.18 seconds. CPU system time: 0.93 seconds. Elapsed time: 23.15 seconds; current allocated memory: 201.578 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<17, 3, 18>(ap_ufixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<19, 3, 0>(ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.61 seconds. CPU system time: 0.36 seconds. Elapsed time: 3.98 seconds; current allocated memory: 202.012 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 202.012 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 232.117 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1102: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 269.223 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:18:16) to (qubit_state_visualizer/core.cpp:39:2) in function 'qubit_operations'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:37:19) to (qubit_state_visualizer/core.cpp:61:1) in function 'qubit_operations'... converting 28 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:88:9) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:245:27) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.39 seconds; current allocated memory: 321.629 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 342.734 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qubit_operations' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 342.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 342.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln1348) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 342.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 342.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_128_V_ROM_AUTO_1R' to 'qubit_operations_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_12bkb' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' pipeline 'VITIS_LOOP_87_1' pipeline type 'loop pipeline'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.08 seconds; current allocated memory: 197.598 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 54.53 seconds. CPU system time: 2.46 seconds. Elapsed time: 57.66 seconds; current allocated memory: 203.059 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<17, 3, 18>(ap_ufixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<18, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<19, 3, 0>(ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<19, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.21)' (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<((17) - (3)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<17, 3>(ap_fixed<17, 3, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:25:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.06 seconds. CPU system time: 0.82 seconds. Elapsed time: 9.19 seconds; current allocated memory: 203.539 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 203.539 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.25 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.35 seconds; current allocated memory: 230.742 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:1102: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.64 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.69 seconds; current allocated memory: 267.832 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:18:16) to (qubit_state_visualizer/core.cpp:39:2) in function 'qubit_operations'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:37:19) to (qubit_state_visualizer/core.cpp:61:1) in function 'qubit_operations'... converting 28 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:88:9) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:245:27) to (/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/hls_cordic_apfixed.h:293:3) in function 'cordic_apfixed::generic_sincos<17, 3>'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.79 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.85 seconds; current allocated memory: 323.152 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 342.789 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qubit_operations' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.31 seconds; current allocated memory: 342.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 342.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_operations' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln1348) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.53 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 342.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 342.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qubit_operations_Pipeline_VITIS_LOOP_87_1' 
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.746 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 20.08 seconds. CPU system time: 0.9 seconds. Elapsed time: 21.04 seconds; current allocated memory: 201.781 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((23) + (1))) + (29)) + (3)> table_lookup_4oPi_hotbm<23, 29>(int, float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<29, 58, 0>(ap_ufixed<58, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.62.71.82.91.102.111.122.131.142.151)' into 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'clz(int)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::set_mantissa(ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>(bool, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<8>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(float)' into 'hls::hotbm::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::cos(float)' into 'hls::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(float)' into 'hls::hotbm::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:9:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::sin(float)' into 'hls::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:31:0)
+INFO: [HLS 214-178] Inlining function 'hls::cos(float)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'hls::sin(float)' into 'qubit_operations(int, float, float*, float*, float*, float*)' (qubit_state_visualizer/core.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIfE24sin_or_cos_approximationILi29ELi29EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi8EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_float.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:246:0)
+INFO: ==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.742 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 50.86 seconds. CPU system time: 2.29 seconds. Elapsed time: 53.22 seconds; current allocated memory: 201.777 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((23) + (1))) + (29)) + (3)> table_lookup_4oPi_hotbm<23, 29>(int, float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<29, 58, 0>(ap_ufixed<58, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.62.71.82.91.102.111.122.131.142.151)' into 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'clz(int)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::set_mantissa(ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>(bool, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<8>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(float)' into 'hls::hotbm::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::cos(float)' into 'hls::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(float)' into 'hls::hotbm::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:9:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::sin(float)' into 'hls::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:31:0)
+INFO: [HLS 214-178] Inlining function 'hls::cos(float)' into 'qubit_operations(int, float, float, float, float, float)' (qubit_state_visualizer/core.cpp:10:0)
+INFO: [HLS 214-178] Inlining function 'hls::sin(float)' into 'qubit_operations(int, float, float, float, float, float)' (qubit_state_visualizer/core.cpp:10:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIfE24sin_or_cos_approximationILi29ELi29EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi8EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_float.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:246:0)
+INFO: [HLS 214-248]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.742 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 51.77 seconds. CPU system time: 2.3 seconds. Elapsed time: 54.19 seconds; current allocated memory: 201.781 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((23) + (1))) + (29)) + (3)> table_lookup_4oPi_hotbm<23, 29>(int, float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<29, 58, 0>(ap_ufixed<58, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.62.71.82.91.102.111.122.131.142.151)' into 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.59.68.79.88.99.108.119.128.139.148)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'clz(int)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::set_mantissa(ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:286:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>(bool, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<8>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(float)' into 'hls::hotbm::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::cos(float)' into 'hls::cos(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(float)' into 'hls::hotbm::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:9:0)
+INFO: [HLS 214-178] Inlining function 'hls::hotbm::sin(float)' into 'hls::sin(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c++/sincoshotbmfloat.cpp:31:0)
+INFO: [HLS 214-178] Inlining function 'hls::cos(float)' into 'qubit_operations(int, float, float, float, float, float)' (qubit_state_visualizer/core.cpp:10:0)
+INFO: [HLS 214-178] Inlining function 'hls::sin(float)' into 'qubit_operations(int, float, float, float, float, float)' (qubit_state_visualizer/core.cpp:10:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIfE24sin_or_cos_approximationILi29ELi29EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi8EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_float.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:246:0)
+INFO: [HLS 214-248]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=qubit_visualizer
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/soulbird/hls_prac/qc/ips
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 2 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+INFO: [HLS 200-1510] Running: config_export -display_name qubit_visualizer -format ip_catalog -output /home/soulbird/hls_prac/qc/ips -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.738 MB.
+INFO: [HLS 200-10] Analyzing design file 'qubit_state_visualizer/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8.55 seconds. CPU system time: 0.93 seconds. Elapsed time: 9.54 seconds; current allocated memory: 197.770 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.18 seconds. CPU system time: 0.68 seconds. Elapsed time: 7.86 seconds; current allocated memory: 198.664 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 198.664 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 204.203 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 212.613 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (qubit_state_visualizer/core.cpp:31:9) to (qubit_state_visualizer/core.cpp:88:1) in function 'qubit_processor_fixed'... converting 5 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 240.449 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 241.719 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qubit_processor_fixed' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qubit_processor_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-1015] Estimated delay Estimated delay (2.04ns)  of 'add' operation ('ret.V') exceeds the target cycle time (target cycle time: 2ns, clock uncertainty: 0.54ns, effective cycle time: 1.46ns).
+
+INFO: [SCHED 204-61] Pipelining function 'qubit_processor_fixed'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, function 'qubit_processor_fixed'
+WARNING: [HLS 200-871] Estimated clock period (2.03575ns) exceeds the target (target clock period: 2ns, clock uncertainty: 0.54ns, effective delay budget: 1.46ns).
+WARNING: [HLS 200-1016] The critical path in module 'qubit_processor_fixed' consists of the following:	'add' operation ('ret.V') [48]  (2.04 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 241.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Starting global binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 241.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qubit_processor_fixed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/operation' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/in_alpha_real' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/in_alpha_imag' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/in_beta_real' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/in_beta_imag' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/out_alpha_real' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/out_alpha_imag' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/out_beta_real' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qubit_processor_fixed/out_beta_imag' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'qubit_processor_fixed' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qubit_processor_fixed' pipeline 'qubit_processor_fixed' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Bundling port 'operation', 'in_alpha_real', 'in_alpha_imag', 'in_beta_real', 'in_beta_imag', 'out_alpha_real', 'out_alpha_imag', 'out_beta_real', 'out_beta_imag' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'add_17s_17s_17_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_17s_14ns_29_5_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sub_17s_17s_17_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qubit_processor_fixed'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 241.719 MB.
+INFO: [HLS 200-503] Applying 'config_export -vivado_clock 4', using 4 ns in generated Vivado XDC
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'qubit_processor_fixed_add_17s_17s_17_2_1_Adder_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'qubit_processor_fixed_sub_17s_17s_17_2_1_Adder_1'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.1 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.14 seconds; current allocated memory: 241.719 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.15 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.18 seconds; current allocated memory: 248.680 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for qubit_processor_fixed.
+INFO: [VLOG 209-307] Generating Verilog RTL for qubit_processor_fixed.
+INFO: [HLS 200-789] **** Estimated Fmax: 491.22 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 19.17 seconds. CPU system time: 1.74 seconds. Elapsed time: 20.98 seconds; current allocated memory: 51.004 MB.
+INFO: [HLS 200-112] Total CPU user time: 21.74 seconds. Total CPU system time: 2.07 seconds. Total elapsed time: 33.42 seconds; peak allocated memory: 248.742 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
