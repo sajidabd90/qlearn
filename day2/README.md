@@ -1,7 +1,7 @@
 # FPGA-Based Quantum Gate Simulator (Fixed-Point Optimized)
 
 A high-performance, hardware-accelerated quantum gate simulator implemented in **Vitis HLS** for the **Xilinx PYNQ-Z2 (Zynq-7020 SoC)**.  
-This project simulates **1-qubit quantum operations** using fixed-point arithmetic, achieving **up to 94× speedup** over NumPy CPU implementations through **AXI-Stream interface.**
+This project simulates **1-qubit quantum operations** using fixed-point arithmetic, achieving **up to 94× speedup** over NumPy CPU implementations through **AXI-Stream interface.** HW Benchmarking is done at 10k and 100k simulation runs. This is **STILL** a single qubit problem. The next step would be to expand this to include more Gates, and generalize to a multi-qubit circuit. 
 
 ---
 
@@ -54,7 +54,7 @@ The design uses:
 | **CUSTOM HLS [AXI4-Lite]**      | 271.8700          | 1×                   | 0.11×                       | —                         |
 | **CUSTOM HLS [DMA, 10k runs]**  | **0.3126**        | **~870×**            | **~94×**                    | **~6×**                   |
 | **CUSTOM HLS [DMA, 100k runs]** | **0.0361**        | **~7550×**           | **~810×**                   | **~50×**                  |
-
+See graph attached. FYI, didn't bother with AXI4-Lite at 100k sims, so the numbers are the same as the 10k ones. 
 ---
 
 ### 📊 Performance Summary
