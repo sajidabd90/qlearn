@@ -1,0 +1,16 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: single_qubit_dma/core.cpp, Line: 34, Column: 5 }
+Function:        _Z25qubit_processor_fixed_dma7ap_uintILi2EERN3hls6streamINS1_4axisIS_ILi64EELm0ELm0ELm0EEELi0EEES7_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        process_stream_loop
+  - String:          ' '
+  - LoopLoc:         'single_qubit_dma/core.cpp:34:5'
+  - String:          ' '
+  - Function:        'qubit_processor_fixed_dma(ap_uint<2>, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&)'
+    DebugLoc:        { File: single_qubit_dma/core.cpp, Line: 22, Column: 0 }
+  - String:          ' '
+...

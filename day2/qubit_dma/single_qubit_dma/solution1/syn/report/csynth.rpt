@@ -1,0 +1,133 @@
+
+
+================================================================
+== Synthesis Summary Report of 'qubit_processor_fixed_dma'
+================================================================
++ General Information: 
+    * Date:           Sun Aug 10 14:52:41 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        single_qubit_dma
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |           Modules           | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |        |           |           |     |
+    |           & Loops           | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +-----------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ qubit_processor_fixed_dma  |     -|  0.35|        -|       -|         -|        -|     -|        no|     -|  4 (1%)|  311 (~0%)|  223 (~0%)|    -|
+    | o process_stream_loop       |     -|  3.65|        -|       -|         5|        1|     -|       yes|     -|       -|          -|          -|    -|
+    +-----------------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | operation | 0x10   | 32    | W      | Data signal of operation         |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface  | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++------------+---------------+-------+-------+-------+--------+-------+--------+
+| in_stream  | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| out_stream | both          | 64    | 8     | 1     | 1      | 8     | 1      |
++------------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------+
+| Argument   | Direction | Datatype                                    |
++------------+-----------+---------------------------------------------+
+| operation  | in        | ap_uint<2>                                  |
+| in_stream  | in        | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<64>, 0, 0, 0>, 0>& |
++------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+-------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Info                             |
++------------+---------------+-----------+-------------------------------------+
+| operation  | s_axi_control | register  | name=operation offset=0x10 range=32 |
+| in_stream  | in_stream     | interface |                                     |
+| out_stream | out_stream    | interface |                                     |
++------------+---------------+-----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+--------------+-----+-------+---------+
+| Name                               | DSP | Pragma | Variable     | Op  | Impl  | Latency |
++------------------------------------+-----+--------+--------------+-----+-------+---------+
+| + qubit_processor_fixed_dma        | 4   |        |              |     |       |         |
+|   am_addmul_16s_16s_13ns_29_4_1_U1 | 1   |        | ret_V        | add | dsp48 | 3       |
+|   am_addmul_16s_16s_13ns_29_4_1_U1 | 1   |        | mul_ln1270   | mul | dsp48 | 3       |
+|   am_addmul_16s_16s_13ns_29_4_1_U2 | 1   |        | ret_V_1      | add | dsp48 | 3       |
+|   am_addmul_16s_16s_13ns_29_4_1_U2 | 1   |        | mul_ln1270_1 | mul | dsp48 | 3       |
+|   am_submul_16s_16s_13ns_29_4_1_U3 | 1   |        | ret_V_2      | sub | dsp48 | 3       |
+|   am_submul_16s_16s_13ns_29_4_1_U3 | 1   |        | mul_ln1270_2 | mul | dsp48 | 3       |
+|   am_submul_16s_16s_13ns_29_4_1_U4 | 1   |        | ret_V_3      | sub | dsp48 | 3       |
+|   am_submul_16s_16s_13ns_29_4_1_U4 | 1   |        | mul_ln1270_3 | mul | dsp48 | 3       |
++------------------------------------+-----+--------+--------------+-----+-------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------+-----------------------------------------------------------------------+
+| Type      | Options                                 | Location                                                              |
++-----------+-----------------------------------------+-----------------------------------------------------------------------+
+| interface | axis port=in_stream                     | single_qubit_dma/core.cpp:25 in qubit_processor_fixed_dma, in_stream  |
+| interface | axis port=out_stream                    | single_qubit_dma/core.cpp:26 in qubit_processor_fixed_dma, out_stream |
+| interface | s_axilite port=operation bundle=control | single_qubit_dma/core.cpp:27 in qubit_processor_fixed_dma, operation  |
+| interface | s_axilite port=return bundle=control    | single_qubit_dma/core.cpp:28 in qubit_processor_fixed_dma, return     |
+| pipeline  | II=1                                    | single_qubit_dma/core.cpp:39 in qubit_processor_fixed_dma             |
++-----------+-----------------------------------------+-----------------------------------------------------------------------+
+
+

@@ -1,0 +1,1 @@
+remark: single_qubit_dma/core.cpp:34:5: Could not analyze the loop bounds _XLX_SEP_ process_stream_loop single_qubit_dma/core.cpp:34:5 qubit_processor_fixed_dma(ap_uint<2>, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&) 

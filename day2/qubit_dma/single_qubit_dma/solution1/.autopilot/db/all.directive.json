@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "qubit_processor_fixed_dma",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/soulbird\/hls_prac\/qc\/vitis\/qubit_dma\/single_qubit_dma\/solution1\/csynth.tcl",
+          "sourceLine": "13",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "qubit_processor_fixed_dma"
+              }]
+          }
+        }]
+    }]}

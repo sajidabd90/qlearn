@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="single_qubit_dma/core.cpp:34:5" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="single_qubit_dma/core.cpp:34:5" LoopName="process_stream_loop" ParentFunc="qubit_processor_fixed_dma(ap_uint&lt;2&gt;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)"/>
+</VitisHLS:BurstInfo>
+
