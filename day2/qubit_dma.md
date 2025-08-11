@@ -5,11 +5,9 @@ import numpy as np
 import time
 from pynq import pl
 # --- Configuration ---
-# Path to your bitstream
 BITSTREAM_PATH = 'qubit_dma.xsa' 
 
 # --- Fixed-Point Conversion Parameters ---
-# These MUST match your HLS ap_fixed<W, I> type.
 # For ap_fixed<16, 3>, we have:
 # W = 16 (Total bits)
 # I = 3  (Integer bits)
@@ -29,10 +27,6 @@ except FileNotFoundError:
     # Exit gracefully if the bitstream is not found
     exit()
 
-# Get handles to the HLS IP and the DMA controller
-# The names must match your Vivado block design
-# Get handles to the HLS IP and the DMA controller
-# The names must match your Vivado block design
 qproc_ip = ol.qubit
 dma = ol.axi_dma_0
 
@@ -79,20 +73,19 @@ def unpack_qubit_state(packed_val):
 def run_software_benchmark(samples, op_code):
     """Runs a pure NumPy benchmark for comparison."""
     print(f"\n--- Starting Software Benchmark ({samples} samples) ---")
-    # Define a representative state vector and gate
+    #a representative state vector and gate
     state_vec = np.array([0.5+0.5j, 0.5-0.5j], dtype=np.complex64)
     if op_code == 0: # Hadamard
         gate = (1/np.sqrt(2)) * np.array([[1, 1], [1, -1]], dtype=np.complex64)
     else: # Pauli-X
         gate = np.array([[0, 1], [1, 0]], dtype=np.complex64)
-    
+
     # Time the pure computation loop
     start_time = time.time()
     for _ in range(samples):
-        # This is the core software computation
         _ = gate @ state_vec
     end_time = time.time()
-    
+
     total_time_us = (end_time - start_time) * 1e6
     avg_time_us = total_time_us / samples
     print(f"Total software time: {total_time_us:.2f} µs")
@@ -103,25 +96,18 @@ def run_software_benchmark(samples, op_code):
     FPGA Overlay qubit_dma.xsa loaded
     --- Allocating Memory Buffers for DMA ---
 
-
-
 ```python
 # Number of qubit states to process in a batch for benchmarking
 NUM_SAMPLES = 100000
 ```
 
-
 ```python
 print("--- Allocating Memory Buffers for DMA ---")
-# Allocate physically contiguous memory buffers for the DMA
-# The shape is the number of 64-bit packets we want to send/receive
 in_buffer = pynq.allocate(shape=(NUM_SAMPLES,), dtype=np.uint64)
 out_buffer = pynq.allocate(shape=(NUM_SAMPLES,), dtype=np.uint64)
 ```
 
     --- Allocating Memory Buffers for DMA ---
-
-
 
 ```python
 # --- SINGLE RUN VERIFICATION ---
@@ -152,10 +138,8 @@ if op_code == 0: gate = (1/np.sqrt(2)) * np.array([[1, 1], [1, -1]])
 else: gate = np.array([[0, 1], [1, 0]])
 expected_vec = gate @ state_vec
 print(f"Expected Result: ({expected_vec[0].real:.4f}+{expected_vec[0].imag:.4f}j)|0> + ({expected_vec[1].real:.4f}+{expected_vec[1].imag:.4f}j)|1>")
-
 ```
 
-    
     --- Performing Single Run Verification ---
     Starting the hardware accelerator...
     Sending data to hardware via DMA...
@@ -167,8 +151,6 @@ print(f"Expected Result: ({expected_vec[0].real:.4f}+{expected_vec[0].imag:.4f}j
     Operation: Hadamard
     Hardware Result: (1.4141+0.0000j)|0> + (0.0000+0.0000j)|1>
     Expected Result: (1.4142+0.0000j)|0> + (0.0000+0.0000j)|1>
-
-
 
 ```python
 # --- HW DMA BENCHMARKING ---
@@ -191,7 +173,7 @@ print(f"Total HW (DMA) time: {hw_dma_total_time:.2f} µs")
 sw_avg_time = run_software_benchmark(NUM_SAMPLES, op_code)
 
 # --- FINAL COMPARISON ---
-# Hardcoded value from your previous AXI-Lite implementation
+# Hardcoded value from my previous AXI-Lite implementation
 hw_axilite_avg_time = 271.87 
 
 # Calculate speedups
@@ -214,7 +196,6 @@ del in_buffer
 del out_buffer
 ```
 
-    
     --- Starting HW (DMA) Benchmark (100000 samples) ---
     Total HW (DMA) time: 3786.56 µs
     
@@ -232,8 +213,6 @@ del out_buffer
     
     DMA Speedup vs. AXI-Lite: 7179.86x
     DMA Speedup vs. Software: 816.33x
-
-
 
 ```python
 
